@@ -66,8 +66,8 @@ project-root/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Milind-Palaria/Quicksell-Frontend-Assignment.git
-   cd Quicksell-Frontend-Assignment
+   git clone https://github.com/Milind-Palaria/TaskHorizon---Task-Management-Dashboard
+   cd TaskHorizon---Task-Management-Dashboard
    ```
 
 2. **Install dependencies**:

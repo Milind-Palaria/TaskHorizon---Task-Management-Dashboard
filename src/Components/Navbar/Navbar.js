@@ -27,7 +27,7 @@ const Navbar = (props) => {
             <div>
                 <div className="navbar-display-btn" onClick={handleGroupingToggle}>
                     <div className="navbar-display-icon navbar-filter-icon">
-                        <img src="/assets/display.svg" alt="icon" />
+                        <img src="/assets/Display.svg" alt="icon" />
                     </div>
                     <div className="navbar-display-text">
                         Display
