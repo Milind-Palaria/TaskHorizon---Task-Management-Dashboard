@@ -1,0 +1,121 @@
+.task-card-container {
+    position: relative;
+    width: 100%;
+    height: 6.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 8px 1px #ccc;
+    background-color: var(--white1);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* transform: scale(0.9); */
+}
+
+.task-card-id-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-card-id {
+    color: var(--textgrey);
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+.task-card-profile {
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white1);
+    background-color: #b06e0c;
+    border-radius: 50%;
+    font-size: 0.55rem;
+    position: relative;
+}
+
+.task-card-profile-initial {
+    text-transform: uppercase;
+}
+
+.task-card-profile-availability {
+    height: 12px;
+    width: 12px;
+    background-color: var(--grey1);
+    border: 1.5px solid var(--white1);
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    left: 65%;
+    top: 65%;
+}
+
+.task-card-profile-available {
+    background-color: rgb(72, 223, 12);
+}
+
+.task-card-title {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--black1);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 1rem;
+}
+
+.task-card-tags {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    /* position: absolute;
+    bottom: 0.45rem; */
+}
+
+.priority-tag-icon {
+    border: 1px solid var(--grey1);
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+    padding: 2px;
+}
+
+.priority-tag-icon > img {
+    color: var(--textgrey);
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-card-tag {
+    border: 1px solid var(--grey1);
+    padding: 0.25rem;
+    border-radius: 0.3rem;
+    width: fit-content;
+}
+
+.task-card-tag-title {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: var(--textgrey);
+}
+
+.task-card-tag-title::before {
+    display: inline-block;
+    content: " ";
+    height: 7px;
+    width: 7px;
+    background-color: var(--textgrey);
+    border-radius: 50%;
+    margin-right: 0.2rem;
+}

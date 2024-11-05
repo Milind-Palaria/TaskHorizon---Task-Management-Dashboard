@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white1: #ffffff;
+  --black1: #000000;
+
+  --textgrey: #808184;
+
+  --grey1: #dfe4e9;
+  --grey2: #f0f1f4;
+  --grey3: #f8f8fa;
+}
+
+.task-board {
+  /* min-height: calc(100vh - 67px); */
+  min-height: 100vh;
+  background-color: var(--grey2);
+}
+
+.task-list-container {
+  width: fit-content;
+  width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+}

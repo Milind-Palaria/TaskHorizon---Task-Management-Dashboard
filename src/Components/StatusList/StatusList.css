@@ -1,0 +1,59 @@
+.task-container {
+    width: 360px;
+    margin-left: 2.5rem;
+}
+
+.task-container:last-child {
+    margin-right: 2.5rem;
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.task-header-left, .task-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.task-icon {
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.task-title {
+    margin-right: 0.65rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.task-add-item {
+    margin-right: 0.5rem;
+    cursor: pointer;
+    color: var(--textgrey);
+}
+
+.task-options-item {
+    margin-right: 0.5rem;
+    cursor: pointer;
+    color: var(--textgrey);
+}
+
+.task-card-items {
+    width: 100%;
+}
+
+@media (max-width: 500px) and (min-width: 300px) {
+    .task-container {
+        width: 320px;
+        margin-left: 1.5rem;
+    }
+    
+    .task-container:last-child {
+        margin-right: 1.5rem;
+    }
+}
