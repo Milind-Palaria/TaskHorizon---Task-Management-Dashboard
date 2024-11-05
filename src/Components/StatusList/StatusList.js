@@ -1,9 +1,25 @@
+import React, { useState, useEffect } from "react";
 import "./StatusList.css";
 import CardComponent from "../CardComponent/CardComponent";
 
-let totalCards = 0;
-
 const StatusList = (props) => {
+  const [totalCards, setTotalCards] = useState(0);
+
+  useEffect(() => {
+    // Calculate the count of tickets matching the current grouping
+    const count = props.ticketDetails.filter((ticket) => {
+      if (props.groupValue === "status") {
+        return ticket.status === props.listTitle;
+      } else if (props.groupValue === "priority") {
+        return ticket.priority === props.listTitle;
+      } else if (props.groupValue === "user") {
+        return ticket.userObj.name === props.listTitle;
+      }
+      return false;
+    }).length;
+    setTotalCards(count);
+  }, [props.ticketDetails, props.listTitle, props.groupValue]);
+
   return (
     <>
       <div className="task-container">
@@ -89,7 +105,7 @@ const StatusList = (props) => {
                       {props.priorityList
                         ? props.priorityList.map((priorityLevel) =>
                             priorityLevel.level === props.listTitle ? (
-                              <>{priorityLevel.label}</> // Updated to use `priorityLevel.label`
+                              <>{priorityLevel.label}</> // Updated to use priorityLevel.label
                             ) : null
                           )
                         : null}
@@ -113,19 +129,16 @@ const StatusList = (props) => {
         </div>
 
         <div className="task-card-items">
-          {props.ticketDetails.map((ticket) => {
-            if (ticket.status === props.listTitle) {
-              totalCards++;
-              return <CardComponent cardDetails={ticket} />;
-            } else if (ticket.priority === props.listTitle) {
-              totalCards++;
-              return <CardComponent cardDetails={ticket} />;
-            } else if (ticket.userObj.name === props.listTitle) {
-              totalCards++;
-              return <CardComponent cardDetails={ticket} />;
+          {props.ticketDetails.map((ticket, index) => {
+            if (
+              (props.groupValue === "status" && ticket.status === props.listTitle) ||
+              (props.groupValue === "priority" && ticket.priority === props.listTitle) ||
+              (props.groupValue === "user" && ticket.userObj.name === props.listTitle)
+            ) {
+              return <CardComponent key={index} cardDetails={ticket} />;
             }
             return null;
-          }, (totalCards = 0))}
+          })}
         </div>
       </div>
     </>
